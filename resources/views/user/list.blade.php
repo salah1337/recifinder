@@ -5,7 +5,7 @@
     <div id="listshit">
         <a href="{{ route('usershow',$user->id)}}"><h1>{{$user->name}}</h1></a>
     <h1>{{$user->city}}</h1>
-    <img src="/storage/cover_images/{{$user->image}}" alt="">
+    <img src="/user_images/{{$user->image}}" alt="">
     </div>
 </div>
 @endforeach

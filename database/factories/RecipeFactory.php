@@ -13,7 +13,7 @@ $factory->define(Recipe::class, function (Faker $faker) {
         'description' => $faker->text(),
         'ingredients'=>json_encode([$options[$rand_items[0]], $options[$rand_items[1]], $options[$rand_items[2]]]),
         'user_id'=>App\User::inRandomOrder()->first()->id,
-
+        'image'=>'REX'.rand(1,5).'.jpg'
     ];
 });
 

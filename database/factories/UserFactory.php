@@ -18,6 +18,9 @@ use Illuminate\Support\Str;
 
 $factory->define(User::class, function (Faker $faker) {
     
+    $randomando = rand(0,2);
+    $gendorino = ['male','female','unspecified'];
+    
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
@@ -26,7 +29,34 @@ $factory->define(User::class, function (Faker $faker) {
         'remember_token' => Str::random(10),
         'birthday'=>rand(0,31).':'.rand(0,12).':'.rand(1900,2020),
         'bio' => $faker->text(),
-        'gender'=>$faker->randomElement(['male','female']),
-        'city'=>$faker->randomElement(['casablanca','rabat','marakesh','tanger','agadir'])
+        'gender'=>$gendorino[$randomando],
+        'city'=>$faker->randomElement(['casablanca','rabat','marakesh','tanger','agadir']),
+        'image'=>$gendorino[$randomando].'.jpg',
     ];
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//no one will probably ever read this, me included, but it's 1/28/2020 i'm listening to https://www.youtube.com/watch?v=E2PglxuFtUg and i'm feeling very good and enjoying coding, god bless,gg
